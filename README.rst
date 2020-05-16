@@ -135,7 +135,7 @@ your models.
 How does it work?
 -----------------
 
-The full details are outlined in `[MLS2013]`, but basically it's just Ordinary Least
+The full details are outlined in `[MLS2013]`_, but basically it's just Ordinary Least
 Squares. The paper notes that a linear relationship exists between the vector spaces of
 monolingual models, meaning that a simple translation matrix can be used to convert a
 vector from its native vector space to a similar point in a target vector space, placing
