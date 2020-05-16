@@ -10,8 +10,9 @@ another model.
 
 This allows you to compare word embeddings for different languages, avoiding the
 expense and complexity of training bilingual models. With ``transvec``, you can simply
-use pre-trained `Word2Vec models <w2v>` for different languages to measure the
-similarity of words in different languages.
+use pre-trained `Word2Vec <https://radimrehurek.com/gensim/models/word2vec.html>`_
+models for different languages to measure the similarity of words in different
+languages.
 
 Example
 -------
@@ -150,5 +151,3 @@ constructor.
 .. [MLS2013] `Tomas Mikolov, Quoc V Le, Ilya Sutskever. 2013.
         Exploiting Similarities among Languages for Machine Translation
         <https://arxiv.org/pdf/1309.4168.pdf>`_
-
-.. [w2v] https://radimrehurek.com/gensim/models/word2vec.html
