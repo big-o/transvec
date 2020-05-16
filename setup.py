@@ -20,7 +20,7 @@ def main():
 
     setup(
         name="transvec",
-        version="0.0.1",
+        version="0.0.2",
         description="Multilingual word embeddings.",
         long_description=long_description,
         url="http://github.com/big-o/transvec",
