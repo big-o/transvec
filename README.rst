@@ -14,6 +14,13 @@ use pre-trained `Word2Vec <https://radimrehurek.com/gensim/models/word2vec.html>
 models for different languages to measure the similarity of words in different
 languages.
 
+Installation
+------------
+
+.. code-block:: bash
+
+    pip install transvec
+
 Example
 -------
 
@@ -73,6 +80,8 @@ the target language:
 
 .. code-block:: python
 
+    >>> from transvec.transformers import TranslationWordVectorizer
+
     >>> train = [
     ...     ("king", "царь_NOUN"), ("tsar", "царь_NOUN"),
     ...     ("man", "мужчина_NOUN"), ("woman", "женщина_NOUN")
@@ -82,7 +91,15 @@ the target language:
 
 For the convenience of English speakers, we have defined English to be our target
 language in this case. This will create a model that can take inputs in both languages,
-but produce output in English. Now we can make comparisons across both languages:
+but produce output in English.
+
+.. note::
+    The models in our example both produce vectors with the same number of dimensions:
+    this is not required by the TranslationWordVectorizer, and models with different
+    dimensionality may be mixed. The output of the TranslationWordVectorizer will
+    always have the same dimensionality as the target model.
+
+Now we can make comparisons across both languages:
 
 .. code-block:: python
 
