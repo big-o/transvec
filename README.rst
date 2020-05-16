@@ -147,6 +147,8 @@ set of training word pairs. If you want to use OLS instead, simply set the
 regularization parameter (``alpha``) to zero in the ``TranslationWordVectorizer``
 constructor.
 
+References
+----------
 
 .. [MLS2013] `Tomas Mikolov, Quoc V Le, Ilya Sutskever. 2013.
         Exploiting Similarities among Languages for Machine Translation
