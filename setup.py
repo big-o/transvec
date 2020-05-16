@@ -25,6 +25,7 @@ def main():
         author_email="big-o@github",
         license="GNU GPLv3",
         packages=find_packages(exclude="tests"),
+        python_requires=">=3.7",
         install_requires=parse_requirements('requirements.txt'),
         extras_require={
             'dev': parse_requirements('requirements-dev.txt'),
