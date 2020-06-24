@@ -115,7 +115,7 @@ corpus, the model will fall back to using the target language's vector:
     >>> bilingual_model.similar_by_word("king", 1)
     [('queen', 0.6336469054222107)]
 
-We can also get sensible results for words that weren't in our training set (the
+We can also get sensible results for words that aren't in our training set (the
 quality will depend on how comprehensive your training word pairs are):
 
 .. code-block:: python
