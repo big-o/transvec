@@ -2,17 +2,18 @@
 Transvec
 ========
 
-Translate word embeddings across models.
+Combine pre-trained word embedding models for different languages to vectorise
+multi-language documents.
 
 This package includes a python implementation of the the method outlined in `MLS2013`_,
 which allows for word embeddings from one model to be translated to the vector space of
 another model.
 
-This allows you to compare word embeddings for different languages, avoiding the
+This allows you to combine word embeddings from different languages, avoiding the
 expense and complexity of training bilingual models. With ``transvec``, you can simply
 use pre-trained `Word2Vec <https://radimrehurek.com/gensim/models/word2vec.html>`_
 models for different languages to measure the similarity of words in different
-languages.
+languages and produce document vectors for mixed-language text.
 
 Installation
 ------------
