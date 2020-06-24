@@ -34,10 +34,10 @@ Let's say we want to study a corpus of text that contains a mix of Russian and E
     >>> ru_model = gensim.downloader.load("word2vec-ruscorpora-300")
     >>> en_model = gensim.downloader.load("glove-wiki-gigaword-300")
 
-Let's say you don't have the resources to train a model that understands both languages
-well (and you probably don't). It would be nice to take advantage of the knowledge we
-have in these two pre-trained models instead. Let's use the Russian model to compare
-Russian words and the English model to compare English words:
+Now assume you don't have the resources to train a single model that understands both
+languages well (and you probably don't). It would be nice to take advantage of the
+knowledge we have in these two pre-trained models instead. Let's use the Russian model
+to compare Russian words and the English model to compare English words:
 
 .. code-block:: python
 
@@ -47,7 +47,7 @@ Russian words and the English model to compare English words:
     >>> ru_model.similar_by_word("царь_NOUN", 1) # "king"
     [('царица_NOUN', 0.7304918766021729)] # "queen"
 
-As advertised, the word models kind correctly find words with a similar meaning. What if
+As advertised, the models correctly find words with a similar meaning. What if
 we now wish to compare words from different languages?
 
 .. code-block:: python
@@ -116,13 +116,13 @@ corpus, the model will fall back to using the target language's vector:
     [('queen', 0.6336469054222107)]
 
 We can also get sensible results for words that weren't in our training set (the
-accuracy will depend on how representative your training data is):
+accuracy will depend on how representative your training word pairs are):
 
 .. code-block:: python
 
     >>> bilingual_model.similar_by_word("царица_NOUN", 1) # "queen"
     [('king', 0.7763221263885498)]
-    
+
 Note that you can provide regularisation parameters to the `TranslationWordVectorizer`
 to help improve these results if you need to.
 
