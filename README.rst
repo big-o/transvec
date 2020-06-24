@@ -91,8 +91,8 @@ the target language:
     >>> bilingual_model = TranslationWordVectorizer(en_model, ru_model).fit(train)
 
 For the convenience of English speakers, we have defined English to be our target
-language in this case. This will create a model that can take inputs in both languages,
-but produce output in English.
+language in this case. This will create a model that can take inputs in either language,
+but its output will always be in English.
 
 .. note::
     The models in our example both produce vectors with the same number of dimensions:
@@ -116,7 +116,7 @@ corpus, the model will fall back to using the target language's vector:
     [('queen', 0.6336469054222107)]
 
 We can also get sensible results for words that weren't in our training set (the
-accuracy will depend on how representative your training word pairs are):
+quality will depend on how comprehensive your training word pairs are):
 
 .. code-block:: python
 
